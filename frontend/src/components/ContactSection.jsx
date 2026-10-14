@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Clock } from 'lucide-react';
+import { submitContactInquiry } from '../services/api';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -29,17 +30,8 @@ export default function ContactSection() {
     setStatus({ loading: true, success: false, error: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
+      const result = await submitContactInquiry(formData);
+      if (result.success) {
         setStatus({
           loading: false,
           success: true,
@@ -54,18 +46,12 @@ export default function ContactSection() {
           budget: '$1,000 - $3,000 / mo',
           message: ''
         });
-      } else {
-        setStatus({
-          loading: false,
-          success: false,
-          error: data.message || 'Something went wrong. Please try again.'
-        });
       }
     } catch (err) {
       setStatus({
         loading: false,
         success: false,
-        error: 'Unable to reach backend server. Please verify your connection or try again shortly.'
+        error: err.message || 'Unable to send message. Please verify your connection or try again shortly.'
       });
     }
   };

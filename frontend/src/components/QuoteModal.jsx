@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Sparkles, CheckCircle2, AlertCircle, Send } from 'lucide-react';
+import { submitQuoteRequest } from '../services/api';
 
 const availableServices = [
   'SEO Services',
@@ -49,28 +50,15 @@ export default function QuoteModal({ isOpen, onClose, initialService }) {
     setStatus({ loading: true, success: false, error: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/quote', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
+      const result = await submitQuoteRequest(formData);
+      if (result.success) {
         setStatus({ loading: false, success: true, error: '' });
-      } else {
-        setStatus({
-          loading: false,
-          success: false,
-          error: data.message || 'Failed to submit quote request.'
-        });
       }
     } catch (err) {
       setStatus({
         loading: false,
         success: false,
-        error: 'Backend connection failed. Please ensure the backend server is active.'
+        error: err.message || 'Failed to submit quote request. Please try again.'
       });
     }
   };
