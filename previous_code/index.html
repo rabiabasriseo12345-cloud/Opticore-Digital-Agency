@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opticore Digitals - Performance-Driven Digital Marketing Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd, #012970);
+            color: #ffffff;
+            padding: 20px 50px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+        }
+
+        .logo-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cfe2ff;
+        }
+
+        .quote-btn {
+            background-color: #ffffff;
+            color: #0d6efd;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 0;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text h3 {
+            font-size: 18px;
+            color: #9ec5fe;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 46px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .consultation-btn {
+            background-color: #ffffff;
+            color: #0d6efd;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+        }
+
+        /* Common Section Styling */
+        .services-section {
+            padding: 80px 50px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #012970;
+            margin-bottom: 15px;
+        }
+
+        .section-desc {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Grid Layout for Cards */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            text-align: left;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #0d6efd;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #012970;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Dark / Alternate Sections */
+        .dark-section {
+            background-color: #012970;
+            color: #ffffff;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .dark-section .section-title {
+            color: #ffffff;
+        }
+
+        .dark-section .section-desc {
+            color: #e2e8f0;
+        }
+
+        .dark-section .card {
+            background: #0d6efd;
+            border: 1px solid #1a73e8;
+            color: #ffffff;
+        }
+
+        .dark-section .card h3 {
+            color: #ffffff;
+        }
+
+        .dark-section .card p {
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section & Navbar -->
+    <section class="hero-section">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Opticore Digitals Logo">
+                <h2>Opticore Digitals</h2>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="quote-btn">REQUEST QUOTE</a>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Grow Your Business with Data-Driven Marketing</h3>
+                <h1>Performance-Driven Digital Marketing Agency in Lahore</h1>
+                <p>Opticore Digitals helps businesses grow faster through data-driven digital marketing strategies. Our team specializes in search engine optimization (SEO), paid advertising, social media marketing, and high-converting web solutions.</p>
+                <a href="contact.html" class="consultation-btn">GET FREE CONSULTATION</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2 class="section-title">Our Digital Marketing Services</h2>
+        <p class="section-desc">We offer a full range of digital marketing solutions designed to build a strong online presence and generate consistent leads.</p>
+        
+        <div class="grid-4">
+            <div class="card">
+                <h3>SEO Services</h3>
+                <p>Boost your search engine rankings and attract targeted organic traffic through proven optimization techniques.</p>
+            </div>
+            <div class="card">
+                <h3>Pay-Per-Click Advertising</h3>
+                <p>Generate immediate traffic and high-quality leads with targeted Google Ads and social media PPC campaigns.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media Marketing</h3>
+                <p>Build brand awareness, engage with your audience, and drive conversions across major social channels.</p>
+            </div>
+            <div class="card">
+                <h3>Website Development</h3>
+                <p>Get a modern, responsive, and SEO-friendly website designed to turn visitors into loyal customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Frameworks Section -->
+    <section style="padding: 80px 50px; text-align: center; background-color: #f4f7fb;">
+        <h2 class="section-title">Our Proven Digital Marketing Frameworks</h2>
+        <p class="section-desc">At Opticore Digitals, we follow proven marketing frameworks to attract the right audience, build trust, and convert visitors into customers.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>AIDA Marketing Model</h3>
+                <p>We use the AIDA framework to capture attention, build interest, create desire, and drive customer action through strategic campaigns.</p>
+            </div>
+            <div class="card">
+                <h3>Full Funnel Strategy</h3>
+                <p>Our funnel-based approach targets customers at every stage, from awareness to conversion, ensuring consistent lead generation.</p>
+            </div>
+            <div class="card">
+                <h3>Data-Driven Marketing</h3>
+                <p>We analyze data, track performance, and continuously optimize campaigns to maximize ROI and long-term business success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Process Section -->
+    <section class="services-section">
+        <h2 class="section-title">Our Digital Marketing Process</h2>
+        <p class="section-desc">We follow a proven, data-driven process designed to deliver measurable growth, higher traffic, and more qualified leads.</p>
+        
+        <div class="grid-4">
+            <div class="card">
+                <h3>1. Research & Strategy</h3>
+                <p>We analyze your market, competitors, and target audience to build a powerful custom marketing strategy.</p>
+            </div>
+            <div class="card">
+                <h3>2. Campaign Planning</h3>
+                <p>Our experts create tailored SEO, social media, and advertising campaigns designed for maximum brand visibility.</p>
+            </div>
+            <div class="card">
+                <h3>3. Execution</h3>
+                <p>We launch and manage campaigns while continuously optimizing performance to ensure maximum ROI.</p>
+            </div>
+            <div class="card">
+                <h3>4. Performance Tracking</h3>
+                <p>Detailed analytics and reports help us measure success, improve campaigns, and scale your business growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="dark-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-desc">Real experiences from businesses using our digital marketing solutions.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>Kelly John</h3>
+                <p>"Opticore Digitals helped us improve our search engine rankings and increase organic traffic through their professional SEO services. Highly recommended!"</p>
+            </div>
+            <div class="card">
+                <h3>Anaz Rehman</h3>
+                <p>"It was a great experience. Their digital marketing solutions helped us generate qualified leads through PPC and social media campaigns."</p>
+            </div>
+            <div class="card">
+                <h3>William Stark</h3>
+                <p>"We saw a noticeable improvement in our online presence. Their SEO and marketing strategies are practical, result-oriented, and effective."</p>
+            </div>
+        </div>
+    </section>
+    <section style="padding: 80px 50px; background-color: #ffffff;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <img src="about-img.jpg" alt="Opticore Digitals Team" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <h2 style="font-size: 38px; color: #012970; margin-bottom: 20px; line-height: 1.2;">Why Choose Opticore Digitals?</h2>
+                <p style="font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 25px;">
+                    Opticore Digitals is a results-driven digital marketing agency dedicated to helping businesses grow online. Our data-driven strategies, experienced team, and innovative marketing solutions help brands increase visibility, generate leads, and achieve long-term success.
+                </p>
+
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                    <li style="margin-bottom: 12px; font-size: 15px; color: #333; display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #0d6efd; font-weight: bold; font-size: 18px;">✔</span> Data-Driven Digital Marketing Strategies
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 15px; color: #333; display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #0d6efd; font-weight: bold; font-size: 18px;">✔</span> Experienced SEO & Marketing Experts
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 15px; color: #333; display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #0d6efd; font-weight: bold; font-size: 18px;">✔</span> Transparent Reporting & Analytics
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 15px; color: #333; display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #0d6efd; font-weight: bold; font-size: 18px;">✔</span> Focus on Real Business Growth
+                    </li>
+                </ul>
+
+                <a href="contact.html" style="background-color: #0d6efd; color: #ffffff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);">GET FREE CONSULTATION</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Professional Multi-Column Footer -->
+    <footer style="background-color: #0b132b; color: #ffffff; padding: 60px 50px 20px 50px; text-align: left;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            
+            <!-- Column 1: About Agency -->
+            <div>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                    <img src="logo.png" alt="Opticore Digitals Logo" style="width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 3px;">
+                    <h3 style="font-size: 18px; color: #ffffff;">Opticore Digitals</h3>
+                </div>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6;">
+                    Opticore Digitals partners with ambitious businesses to deliver scalable growth through data-driven marketing and innovative digital strategies.
+                </p>
+            </div>
+
+            <!-- Column 2: Contact Info -->
+            <div>
+                <h3 style="font-size: 18px; color: #ffffff; margin-bottom: 15px; border-bottom: 2px solid #0d6efd; display: inline-block; padding-bottom: 5px;">Contact Info</h3>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.8; margin-bottom: 8px;"><strong>Email:</strong> info@opticoredigitals.com</p>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.8; margin-bottom: 8px;"><strong>Office:</strong> G.T Road, Staff Houses, Engineering University Lahore, 39161</p>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.8;"><strong>Phone:</strong> +92 301 9714441 </p>
+            </div>
+
+            <!-- Column 3: Company Quick Links -->
+            <div>
+                <h3 style="font-size: 18px; color: #ffffff; margin-bottom: 15px; border-bottom: 2px solid #0d6efd; display: inline-block; padding-bottom: 5px;">Company</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><a href="index.html" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Home</a></li>
+                    <li style="margin-bottom: 8px;"><a href="about.html" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">About</a></li>
+                    <li style="margin-bottom: 8px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Services</a></li>
+                    <li style="margin-bottom: 8px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Contact</a></li>
+                    <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Social Links -->
+            <div>
+                <h3 style="font-size: 18px; color: #ffffff; margin-bottom: 15px; border-bottom: 2px solid #0d6efd; display: inline-block; padding-bottom: 5px;">Social</h3>
+                <div style="display: flex; gap: 15px; margin-top: 10px;">
+                    <a href="#" style="color: #ffffff; background: #0d6efd; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; font-weight: bold;">f</a>
+                    <a href="#" style="color: #ffffff; background: #0d6efd; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; font-weight: bold;">t</a>
+                    <a href="#" style="color: #ffffff; background: #0d6efd; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; font-weight: bold;">in</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div style="border-top: 1px solid #1e293b; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <p style="font-size: 13px; color: #94a3b8;">Copyright &copy; 2026 Opticore Digitals | Powered by Opticore Digitals</p>
+            <a href="#" style="font-size: 13px; color: #94a3b8; text-decoration: none;">Privacy Policy</a>
+        </div>
+    </footer>
+

@@ -1,0 +1,16 @@
+{
+  "name": "opticore-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Opticore Digitals Marketing Agency",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.7",
+    "express": "^4.21.2"
+  }
+}
